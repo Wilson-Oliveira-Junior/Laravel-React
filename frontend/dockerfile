@@ -1,0 +1,14 @@
+# frontend/Dockerfile
+FROM node:18
+
+# Define o diretório de trabalho
+WORKDIR /app
+
+# Copia os arquivos do React para o contêiner
+COPY . .
+
+# Instala as dependências do React
+RUN npm install
+
+EXPOSE 3000
+CMD ["npm", "start"]
